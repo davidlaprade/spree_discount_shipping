@@ -10,3 +10,5 @@ nbproject
 spec/dummy
 Gemfile.lock
 Guardfile
+vendor/
+.bundle
