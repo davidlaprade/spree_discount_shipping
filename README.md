@@ -14,7 +14,19 @@ Apply discounts to shipping methods in Spree Commerce.
 
 Installation
 =======
- 
+
+Add the following line to your `Gemfile`:
+
+```ruby
+gem 'spree_discount_shipping', github: 'davidlaprade/spree_discount_shipping', branch: 'master'
+```
+
+Then:
+```shell
+bundle install
+```
+
+Then:
 ```ruby
 bundle exec rails g spree_discount_shipping:install
 ```
