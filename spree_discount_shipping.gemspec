@@ -1,16 +1,15 @@
 # encoding: UTF-8
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
-  s.name        = 'spree_local_tax'
-  s.version     = '1.2.0'
-  s.summary     = 'Local tax calculation for Spree Commerce'
-  s.description = 'Local tax calculation (i.e. state based for US tax requirements) for Spree Commerce.' +
-                  'ability to include/exclude shipping, promotions, etc from tax calculation'
+  s.name        = 'spree_discount_shipping'
+  s.version     = '1.0.0'
+  s.summary     = 'Shipping Discounts for Spree Commerce'
+  s.description = 'Add discounts to shipping methods in Spree Commerce'
   s.required_ruby_version = '>= 1.8.7'
 
-  s.author    = 'Michael Bianco'
-  s.email     = 'info@cliffsidedev.com'
-  s.homepage  = 'http://cliffsidemedia.com/'
+  s.author    = 'David Laprade'
+  s.email     = 'david.laprade@gmail.com'
+  s.homepage  = 'http://davidlaprade.github.io/'
 
   s.require_path = 'lib'
   s.requirements << 'none'
