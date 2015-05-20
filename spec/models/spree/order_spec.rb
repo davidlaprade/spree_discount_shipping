@@ -9,7 +9,7 @@ describe Spree::Order, :type => :model do
     calc = double()
     calc.stub(:available?) { |order| true }
     calc.stub(:preferences).and_return({:amount=>0, :currency=>"USD"})
-    calc.stub(:compute) {|order| 10.0}
+    calc.stub(:compute) { |order| 10.0 }
     Spree::ShippingMethod.any_instance.stub(:calculator).and_return(calc)
 
     # get shipping rates
