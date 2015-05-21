@@ -18,7 +18,7 @@ Installation
 Add the following line to your `Gemfile`:
 
 ```ruby
-gem 'spree_discount_shipping', github: 'davidlaprade/spree_discount_shipping', branch: 'master'
+gem 'spree_discount_shipping', github: 'davidlaprade/spree_discount_shipping', branch: '1-3-stable'
 ```
 
 Then:
