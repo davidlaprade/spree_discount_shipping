@@ -9,7 +9,7 @@ Spree::Order.class_eval do
       Spree::ShippingRate.new( :id => ship_method.id,
                         :shipping_method => ship_method,
                         :name => ship_method.name,
-                        :cost => cost * (100 - (ship_method.discount || 0))/100.0,
+                        :cost => cost * (100 - (ship_method.discount || 0 rescue 0))/100.0,
                         :currency => currency)
     end.compact.sort_by { |r| r.cost }
   end
