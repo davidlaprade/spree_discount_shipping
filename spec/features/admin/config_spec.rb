@@ -10,6 +10,7 @@ describe 'shipping method config in spree admin', js: true do
     expect(page).to have_content("New Shipping Method")
   end
 
+  # TODO the user login is failing; not sure why. Something spree related.
   it 'should allow admin to set discount through GUI' do
     fill_in 'Name', :with => 'Test Shipping Method'
     fill_in 'discount %', :with => 45
