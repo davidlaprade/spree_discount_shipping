@@ -22,3 +22,9 @@ RSpec.configure do |config|
   config.mock_with :rspec
   config.use_transactional_fixtures = true
 end
+
+firefox_cask_path = '/opt/homebrew-cask/Caskroom/firefox/latest/Firefox.app/Contents/MacOS/firefox-bin'
+
+if File.exists?(firefox_cask_path)
+  Selenium::WebDriver::Firefox::Binary.path = firefox_cask_path
+end
