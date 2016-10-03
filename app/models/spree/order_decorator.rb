@@ -5,7 +5,8 @@ Spree::Order.class_eval do
   # apply the the Spree::ShippingMethod's discount to the estimated shipping cost
   def rate_hash
     @rate_hash ||= available_shipping_methods.collect do |ship_method|
-      next unless cost = ship_method.calculator.compute(self)
+      cost = ship_method.calculator.compute(self) rescue nil
+      next unless cost
       Spree::ShippingRate.new( :id => ship_method.id,
                         :shipping_method => ship_method,
                         :name => ship_method.name,
