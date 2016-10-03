@@ -4,7 +4,7 @@ Deface::Override.new(:virtual_path => "spree/admin/shipping_methods/_form",
                      :text => %q{<div class="four columns">
     <%= f.field_container :discount do %>
       <%= f.label :discount, 'discount %' %><br />
-      <%= f.number_field :discount, in: 0..100, step: 5, class: 'fullwidth' %>
+      <%= f.number_field :discount, in: -100..100, step: 5, class: 'fullwidth' %>
       <%= error_message_on :shipping_method, :discount %>
     <% end %>
   </div>})
