@@ -8,9 +8,10 @@ Spree::ShippingMethod.class_eval do
     discount = (100 - (self.discount || 0))/100.0 rescue 1
     original * discount
   rescue
-    Rails.logger.error "Spree::ShippingMethod compute error for " +
-      self.inspect + ", with calculable: " +
-      calculable.inspect + ". Using default amount #{DEFAULT_AMOUNT}"
+    Rails.logger.error "Spree::ShippingMethod COMPUTE ERROR for " +
+      "#{self.class} ##{self.id}, with calculable: " +
+      "#{calculable.class} ##{calculable.id}. " +
+      "Using default amount #{DEFAULT_AMOUNT}"
     DEFAULT_AMOUNT
   end
 end
